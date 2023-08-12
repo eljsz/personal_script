@@ -3,12 +3,15 @@
 apt-get update -y && apt-get install curl -y
 apt-get install wget -y
 
+# 定义菜单选项数组
+options=("安装 Warp"
+         "安装 x-ui"
+         "安装 x-ui + 进程守护"
+         "全部安装"
+         "退出")
+
 # 显示菜单并等待用户选择
-select option in "安装 Warp"\
-                "安装 x-ui"\
-                "安装 x-ui + 进程守护"\
-                "全部安装"\
-                "退出"; do
+select option in "${options[@]}"; do
     case $option in
         "安装 Warp")
             # 执行安装 Warp 的代码
