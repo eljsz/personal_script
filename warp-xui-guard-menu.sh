@@ -23,26 +23,31 @@ read -p "请输入选项号码: " choice
 
 case $choice in
     0)
-        echo "退出脚本"
+        echo "${green}退出脚本${plain}"
         exit 0
         ;;
     1)
-        echo "安装 warp"
+        echo "${green}"开始安装 warp${plain}"
         wget -N https://raw.githubusercontent.com/fscarmen/warp/main/menu.sh && bash menu.sh
         ;;
     2)
-        echo "安装 x-ui"
+        echo "${green}"开始安装 x-ui${plain}"
         bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/x-ui/install.sh)
         ;;
     3)
-        echo "安装 x-ui + xray进程守护"
+        echo "${green}"安装 x-ui + xray进程守护${plain}"
+        echo "${green}"开始安装 x-ui${plain}"
         bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/x-ui/install.sh)
+        echo "${green}"开始安装xray进程守护${plain}"
         bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/check_x-ui.sh)
         ;;
     4)
-        echo "全部安装"
+        echo "${green}"全部安装${plain}"
+        echo "${green}"开始安装 warp${plain}"
         wget -N https://raw.githubusercontent.com/fscarmen/warp/main/menu.sh && bash menu.sh
+        echo "${green}"开始安装 x-ui${plain}"
         bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/x-ui/install.sh)
+        echo "${green}"开始安装xray进程守护${plain}"
         bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/check_x-ui.sh)
         ;;
     *)
