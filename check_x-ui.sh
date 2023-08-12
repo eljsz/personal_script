@@ -5,6 +5,8 @@ curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
 # Create a directory for the script
+sudo mkdir -p /usr/local/check_x-ui
+cd /usr/local/check_x-ui
 
 # Create the Node.js script
 echo "
@@ -14,7 +16,7 @@ const checkAndStartXUI = () => {
   try {
     console.log('Checking x-ui status...');
     
-    const cmd = spawn('sudo', ['systemctl', 'status', 'x-ui']);
+    const cmd = spawn('systemctl', ['status', 'x-ui']);
 
     cmd.stdout.on('data', (data) => {
       const output = data.toString();
@@ -58,13 +60,30 @@ const startXUI = () => {
   });
 };
 
-setInterval(checkAndStartXUI, 30000); // Every 10 seconds
+setInterval(checkAndStartXUI, 30000); // Every 30 seconds
 
 // Initial check when the script starts
 checkAndStartXUI();
-
-
 " > check_and_start_x-ui.js
 
 # Run the Node.js script
-nohup node check_and_start_x-ui.js  >check_and_start_x.log 2>&1 &
+nohup node check_and_start_x-ui.js > check_and_start_x.log 2>&1 &
+
+# Create a systemd service for the script
+sudo tee /etc/systemd/system/check_x-ui.service > /dev/null <<EOT
+[Unit]
+Description=Check and Start x-ui Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/node /usr/local/check_x-ui/check_and_start_x-ui.js
+Restart=always
+
+[Install]
+WantedBy=default.target
+EOT
+
+# Enable and start the service
+sudo systemctl enable check_x-ui.service
+sudo systemctl start check_x-ui.service
