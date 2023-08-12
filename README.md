@@ -6,10 +6,8 @@
 <pre><code>bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/warp-xui-guard.sh)</code></pre>
 
 ### 程序快捷键
-<pre><code>
-dg  唤醒本整合脚本
+<pre><code>dg  唤醒本整合脚本
 
 x-ui 唤醒x-ui功能列表
 
-warp 唤醒warp功能列表
-</code></pre>
+warp 唤醒warp功能列表</code></pre>
