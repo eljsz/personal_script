@@ -7,6 +7,9 @@ options=("安装 Warp"
          "全部安装"
          "退出")
 
+# 设置选择提示
+PS3="请输入选项号码（或按 Ctrl+C 退出）： "
+
 # 显示菜单并等待用户选择
 select option in "${options[@]}"; do
     case $option in
