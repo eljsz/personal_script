@@ -38,6 +38,7 @@ case $choice in
         echo -e "${green}开始安装 x-ui + xray进程守护${plain}"
         echo -e "${green}开始安装 x-ui${plain}"
         bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/x-ui/install.sh)
+        read -p "按回车继续安装xray..."
         echo -e "${green}开始安装 xray进程守护${plain}"
         bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/check_x-ui.sh)
         ;;
@@ -45,8 +46,10 @@ case $choice in
         echo -e "${green}全部安装${plain}"
         echo -e "${green}开始安装 warp${plain}"
         wget -N https://raw.githubusercontent.com/fscarmen/warp/main/menu.sh && bash menu.sh
+        read -p "按回车继续安装 x-ui..."
         echo -e "${green}开始安装 x-ui${plain}"
         bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/x-ui/install.sh)
+        read -p "按回车继续安装 xray 进程守护..."
         echo -e "${green}开始安装 xray进程守护${plain}"
         bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/check_x-ui.sh)
         ;;
