@@ -78,4 +78,5 @@ case $choice in
         ;;
 esac
 
+alias dg='bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/warp-xui-guard-menu.sh)'
 echo "电报群：https://t.me/+vTwBHA9RbtMwYzA9"
