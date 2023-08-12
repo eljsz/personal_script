@@ -138,7 +138,7 @@ install_x-ui() {
     cd x-ui
     chmod +x x-ui bin/xray-linux-${arch}
     cp -f x-ui.service /etc/systemd/system/
-    wget --no-check-certificate -O /usr/bin/x-ui https://raw.githubusercontent.com/vaxilu/x-ui/main/x-ui.sh
+    wget --no-check-certificate -O /usr/bin/x-ui https://raw.githubusercontent.com/eljsz/personal_script/master/x-ui/x-ui.sh
     chmod +x /usr/local/x-ui/x-ui.sh
     chmod +x /usr/bin/x-ui
     config_after_install
@@ -154,7 +154,7 @@ install_x-ui() {
     echo -e "${green}x-ui v${last_version}${plain} 安装完成，面板已启动，"
     echo -e ""
     echo -e "x-ui 管理脚本使用方法: "
-	echo -e "整合作者:地瓜  https://t.me/+vTwBHA9RbtMwYzA9"
+    echo -e "整合作者:地瓜  https://t.me/+vTwBHA9RbtMwYzA9"
     echo -e "----------------------------------------------"
     echo -e "x-ui              - 显示管理菜单 (功能更多)"
     echo -e "x-ui start        - 启动 x-ui 面板"
