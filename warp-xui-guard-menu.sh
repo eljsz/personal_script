@@ -24,7 +24,6 @@ read -p "请输入选项号码: " choice
 case $choice in
     0)
         echo -e "${green}退出脚本${plain}"
-        exit 0
         ;;
     1)
         echo -e "${green}开始安装 warp${plain}"
