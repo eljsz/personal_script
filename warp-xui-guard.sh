@@ -23,6 +23,8 @@ select option in "${options[@]}"; do
             echo "x-ui 安装完成！"
             ;;
         "安装 x-ui + 进程守护")
+            bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/x-ui/install.sh)
+            echo "x-ui 安装完成！"
             bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/check_x-ui.sh)
             echo "x-ui + 进程守护安装完成！"
             ;;
