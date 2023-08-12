@@ -6,7 +6,7 @@ plain="\e[0m"
 
 # 显示菜单并等待用户选择
 echo -e "
-  ${green}x-ui 面板管理脚本${plain}
+  ${green}整合脚本${plain}
   ${green}整合作者:地瓜  https://t.me/+vTwBHA9RbtMwYzA9${plain}
   ${green}0.${plain} 退出脚本
 ————————————————
