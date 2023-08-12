@@ -1,43 +1,53 @@
 #!/bin/bash
 
-apt-get update -y && apt-get install curl -y
-apt-get install wget -y
+# 颜色设置
+green="\e[32m"
+plain="\e[0m"
 
-# 显示 dialog 菜单并获取用户选择
-choice=$(dialog --menu "选择安装选项" 12 50 5 \
-    1 "安装 Warp" \
-    2 "安装 x-ui" \
-    3 "安装 x-ui + 进程守护" \
-    4 "全部安装" \
-    5 "退出" 3>&1 1>&2 2>&3)
+# 显示菜单并等待用户选择
+echo -e "
+  ${green}x-ui 面板管理脚本${plain}
+  ${green}整合作者:地瓜  https://t.me/+vTwBHA9RbtMwYzA9${plain}
+  ${green}0.${plain} 退出脚本
+————————————————
+  ${green}1.${plain} 安装 warp
+  ${green}2.${plain} 安装 x-ui
+  ${green}3.${plain} 安装 x-ui + xray进程守护
+  ${green}4.${plain} 全部安装
+"
+
+# 获取用户选择
+read -p "请输入选项号码: " choice
 
 case $choice in
-    1)
-        # 安装 Warp
-        wget -N https://raw.githubusercontent.com/fscarmen/warp/main/menu.sh && bash menu.sh
-        echo "Warp 安装完成！"
-        ;;
-    2)
-        # 安装 x-ui
-        bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/x-ui/install.sh)
-        echo "x-ui 安装完成！"
-        ;;
-    3)
-        # 安装 x-ui + 进程守护
-        bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/check_x-ui.sh)
-        echo "x-ui + 进程守护安装完成！"
-        ;;
-    4)
-        # 安装全部
-        # ... 执行全部安装代码 ...
-        ;;
-    5)
+    0)
         echo "退出脚本"
         exit 0
+        ;;
+    1)
+        echo "安装 warp"
+		wget -N https://raw.githubusercontent.com/fscarmen/warp/main/menu.sh && bash menu.sh
+        ;;
+    2)
+        echo "安装 x-ui"
+		bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/x-ui/install.sh)
+        ;;
+    2)
+        echo "安装 x-ui + xray进程守护"
+		bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/x-ui/install.sh)
+		bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/check_x-ui.sh)
+        ;;
+	2)
+        echo "全部安装"
+		wget -N https://raw.githubusercontent.com/fscarmen/warp/main/menu.sh && bash menu.sh
+		bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/x-ui/install.sh)
+		bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/check_x-ui.sh)
         ;;
     *)
         echo "无效选项"
         ;;
 esac
+
+
 
 echo "电报群：https://t.me/+vTwBHA9RbtMwYzA9"
