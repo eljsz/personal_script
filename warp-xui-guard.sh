@@ -18,7 +18,13 @@ plain='\033[0m'
 # alias dg='sh /usr/local/x-ui/warp-xui-guard-menu.sh'
 # source ~/.bashrc 
 # 定义别名
+# alias dg='bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/warp-xui-guard-menu.sh)'
+nano ~/.bashrc
+nano ~/.zshrc
 alias dg='bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/warp-xui-guard-menu.sh)'
+source ~/.bashrc   # 如果使用的是 Bash
+source ~/.zshrc    # 如果使用的是 Zsh
+
 
 # 显示菜单并等待用户选择
 echo -e "
