@@ -30,3 +30,4 @@ if [ "$choice2" == "y" ]; then
 	fi
 fi
 
+echo "电报群：https://t.me/+vTwBHA9RbtMwYzA9"
