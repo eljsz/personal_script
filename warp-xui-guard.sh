@@ -1,5 +1,9 @@
 #!/bin/bash
 
+apt-get update -y && apt-get install curl -y
+
+apt install wget
+
 # 提示用户选择是否继续安装Warp
 read -p "是否继续安装warp？ (y/n): " choice1
 
