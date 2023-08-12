@@ -14,7 +14,7 @@ echo -e "
 ————————————————
   ${green}1.${plain} 安装 warp
   ${green}2.${plain} 安装 x-ui
-  ${green}3.${plain} 安装 x-ui + xray 进程守护
+  ${green}3.${plain} 安装 x-ui + xray进程守护
   ${green}4.${plain} 全部安装
 "
 
@@ -35,10 +35,10 @@ case $choice in
         bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/x-ui/install.sh)
         ;;
     3)
-        echo -e "${green}开始安装 x-ui + xray 进程守护${plain}"
+        echo -e "${green}开始安装 x-ui + xray进程守护${plain}"
         echo -e "${green}开始安装 x-ui${plain}"
         bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/x-ui/install.sh)
-        echo -e "${green}开始安装 xray 进程守护${plain}"
+        echo -e "${green}开始安装 xray进程守护${plain}"
         bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/check_x-ui.sh)
         ;;
     4)
@@ -47,7 +47,7 @@ case $choice in
         wget -N https://raw.githubusercontent.com/fscarmen/warp/main/menu.sh && bash menu.sh
         echo -e "${green}开始安装 x-ui${plain}"
         bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/x-ui/install.sh)
-        echo -e "${green}开始安装 xray 进程守护${plain}"
+        echo -e "${green}开始安装 xray进程守护${plain}"
         bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/check_x-ui.sh)
         ;;
     *)
