@@ -11,7 +11,12 @@ if [ "$choice1" == "y" ]; then
     # 执行安装Warp的代码
     wget -N https://raw.githubusercontent.com/fscarmen/warp/main/menu.sh && bash menu.sh
 
-    # 提示用户选择是否继续安装x-ui
+
+else
+    echo "安装已取消。"
+fi
+
+ # 提示用户选择是否继续安装x-ui
     read -p "Warp安装完成！是否继续安装x-ui？ (y/n): " choice2
 
     if [ "$choice2" == "y" ]; then
@@ -29,6 +34,3 @@ if [ "$choice1" == "y" ]; then
     else
         echo "安装已取消。"
     fi
-else
-    echo "安装已取消。"
-fi
