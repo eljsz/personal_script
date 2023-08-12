@@ -11,7 +11,7 @@ green='\033[0;32m'
 yellow='\033[0;33m'
 plain='\033[0m'
 
-alias dg='bash <(curl -Ls https://raw.githubusercontent.com/eljsz/personal_script/master/warp-xui-guard.sh)'
+alias dg='bash <(curl -Ls https://raw.githubusercontent.com/eljsz/personal_script/master/warp-xui-guard-menu.sh)'
 source ~/.bashrc
 
 
