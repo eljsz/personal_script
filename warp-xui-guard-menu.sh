@@ -1,12 +1,14 @@
 #!/bin/bash
 
 # 颜色设置
-green="\033[32m"
-plain="\033[0m"
+red='\033[0;31m'
+green='\033[0;32m'
+yellow='\033[0;33m'
+plain='\033[0m'
 
 # 显示菜单并等待用户选择
 echo -e "
-  ${green}x-ui 面板管理脚本${plain}
+  ${green}管理整合脚本${plain}
   ${green}整合作者:地瓜  https://t.me/+vTwBHA9RbtMwYzA9${plain}
   ${green}0.${plain} 退出脚本
 ————————————————
