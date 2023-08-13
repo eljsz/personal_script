@@ -25,6 +25,7 @@ plain='\033[0m'
 # source ~/.zshrc    # 如果使用的是 Zsh
 
 wget --no-check-certificate -O /home/dg/ https://raw.githubusercontent.com/eljsz/personal_script/master/warp-xui-guard-menu.sh
+mkdir -p /home/dg/
 chmod +x /home/dg/warp-xui-guard-menu.sh
 chmod +x /home/dg
 alias dg='sh /home/dg/warp-xui-guard-menu.sh'
