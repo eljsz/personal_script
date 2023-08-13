@@ -5,6 +5,12 @@ apt-get install wget -y
 
 #!/bin/bash
 
+wget https://raw.githubusercontent.com/eljsz/personal_script/master/warp-xui-guard-menu.sh
+mv -f warp-xui-guard-menu.sh /etc/dg >/dev/null 2>&1
+chmod +x /etc/dg/warp-xui-guard-menu.sh >/dev/null 2>&1
+ln -sf /etc/dg/warp-xui-guard-menu.sh /usr/bin/dg && info " $(text 38) "
+
+
 # 颜色设置
 red='\033[0;31m'
 green='\033[0;32m'
@@ -77,10 +83,7 @@ case $choice in
         ;;
 esac
 
-wget https://raw.githubusercontent.com/eljsz/personal_script/master/warp-xui-guard-menu.sh
-mv -f warp-xui-guard-menu.sh /etc/dg >/dev/null 2>&1
-chmod +x /etc/dg/warp-xui-guard-menu.sh >/dev/null 2>&1
-ln -sf /etc/dg/warp-xui-guard-menu.sh /usr/bin/dg && info " $(text 38) "
+
     
 # alias dg='bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/warp-xui-guard-menu.sh)'
 echo "电报群：https://t.me/+vTwBHA9RbtMwYzA9"
