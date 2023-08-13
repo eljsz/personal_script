@@ -24,11 +24,10 @@ plain='\033[0m'
 # source ~/.bashrc   # 如果使用的是 Bash
 # source ~/.zshrc    # 如果使用的是 Zsh
 
-wget --no-check-certificate -O /home/dg/ https://raw.githubusercontent.com/eljsz/script-integration/master/warp-xui-guard-menu.sh
-mkdir -p /home/dg/
+wget --no-check-certificate -O /home/dg/warp-xui-guard-menu.sh https://raw.githubusercontent.com/eljsz/script-integration/master/warp-xui-guard-menu.sh
 chmod +x /home/dg/warp-xui-guard-menu.sh
-chmod +x /home/dg
 alias dg='sh /home/dg/warp-xui-guard-menu.sh'
+
 
 # 显示菜单并等待用户选择
 echo -e "
