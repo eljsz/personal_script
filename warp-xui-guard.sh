@@ -26,7 +26,7 @@ plain='\033[0m'
 
 wget --no-check-certificate -O /home/dg/warp-xui-guard-menu.sh https://raw.githubusercontent.com/eljsz/script-integration/master/warp-xui-guard-menu.sh
 chmod +x /home/dg/warp-xui-guard-menu.sh
-alias dg='sh /home/dg/warp-xui-guard-menu.sh'
+alias dg='/home/dg/./warp-xui-guard-menu.sh'
 
 
 # 显示菜单并等待用户选择
