@@ -10,26 +10,6 @@ green='\033[0;32m'
 yellow='\033[0;33m'
 plain='\033[0m'
 
-# mkdir -p /usr/bin/x-ui
-# wget --no-check-certificate -O /usr/bin/x-ui https://raw.githubusercontent.com/eljsz/personal_script/master/warp-xui-guard-menu.sh
-# chmod +x /usr/local/x-ui/warp-xui-guard-menu.sh
-# chmod +x /usr/bin/x-ui
-# alias dg='sh /usr/local/x-ui/warp-xui-guard-menu.sh'
-# source ~/.bashrc 
-# 定义别名
-# alias dg='bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/warp-xui-guard-menu.sh)'
-# nano ~/.bashrc
-# nano ~/.zshrc
-# alias dg='bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/warp-xui-guard-menu.sh)'
-# source ~/.bashrc   # 如果使用的是 Bash
-# source ~/.zshrc    # 如果使用的是 Zsh
-
-wget --no-check-certificate -O /home/dg/warp-xui-guard-menu.sh https://raw.githubusercontent.com/eljsz/script-integration/master/warp-xui-guard-menu.sh
-chmod +x /home/dg/warp-xui-guard-menu.sh
-source ~/.bashrc
-# alias dg='/home/dg/./warp-xui-guard-menu.sh'
-alias dg='sh /home/dg/warp-xui-guard-menu.sh'
-
 
 # 显示菜单并等待用户选择
 echo -e "
