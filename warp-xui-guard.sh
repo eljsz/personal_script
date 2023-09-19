@@ -32,7 +32,7 @@ case $choice in
         ;;
     1)
         echo -e "${green}开始安装 warp${plain}"
-        wget -N https://raw.githubusercontent.com/fscarmen/warp/main/menu.sh && bash menu.sh
+        wget -N https://gitlab.com/fscarmen/warp/-/raw/main/menu.sh && bash menu.sh
         ;;
     2)
         echo -e "${green}开始安装 x-ui${plain}"
@@ -49,7 +49,7 @@ case $choice in
     4)
         echo -e "${green}全部安装${plain}"
         echo -e "${green}开始安装 warp${plain}"
-        wget -N https://raw.githubusercontent.com/fscarmen/warp/main/menu.sh && bash menu.sh
+        wget -N https://gitlab.com/fscarmen/warp/-/raw/main/menu.sh && bash menu.sh
         read -p "按回车继续安装 x-ui..."
         echo -e "${green}开始安装 x-ui${plain}"
         bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/x-ui/install.sh)
