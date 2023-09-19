@@ -3,7 +3,6 @@
 apt-get update -y && apt-get install curl -y
 apt-get install wget -y
 
-
 # 颜色设置
 red='\033[0;31m'
 green='\033[0;32m'
@@ -62,5 +61,7 @@ case $choice in
         ;;
 esac
 
+rm -rf /etc/localtime
+ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 echo "电报群：https://t.me/+vTwBHA9RbtMwYzA9"
