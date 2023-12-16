@@ -1,20 +1,27 @@
 #!/bin/sh
 
-# 检查Python是否已经安装
+# Check if Python 3.8 is installed
 command -v python3.8 >/dev/null 2>&1
 if [ $? -ne 0 ]; then
-    echo "Python3.8尚未安装，正在安装..."
+    echo "Python 3.8 is not installed, installing..."
     sudo apt-get update
     sudo apt-get install -y python3.8
 else
-    echo "Python3.8已经安装."
+    echo "Python 3.8 is already installed."
 fi
 
-# 检查pip是否已经安装
+# Check if pip3 is installed
 command -v pip3 >/dev/null 2>&1
 if [ $? -ne 0 ]; then
-    echo "pip尚未安装，正在安装..."
+    echo "pip is not installed, installing..."
     sudo apt-get install -y python3-pip
 else
-    echo "pip已经安装."
+    echo "pip is already installed."
 fi
+
+# Install the requests module
+echo "Installing requests module..."
+pip3 install requests
+
+# Display a message indicating the installation is complete
+echo "Installation complete."
