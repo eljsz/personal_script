@@ -22,6 +22,7 @@ fi
 # Install the requests module
 echo "Installing requests module..."
 pip3 install requests
+pip3 install aiohttp
 
 # Display a message indicating the installation is complete
 echo "Installation complete."
