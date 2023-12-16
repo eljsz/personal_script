@@ -23,6 +23,7 @@ fi
 echo "Installing requests module..."
 pip3 install requests
 pip3 install multidict
+pip3 install attr
 pip3 install typing_extensions
 pip3 install aiohttp
 
