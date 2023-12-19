@@ -1,8 +1,11 @@
 ### 初始化vps
 <pre><code>apt-get update -y && apt-get install curl -y && apt-get install wget -y</code></pre>
 
-### 检测并按照python、pip
+### 检测并安装python、pip
 <pre><code>bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/install_py.sh)</code></pre>
+
+### 安装nodejs、npm
+<pre><code>bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/nodejs)</code></pre>
 
 ### 30秒检测x-ui是否是运行状态，守护x-ui，开机自启动
 <pre><code>bash <(curl -Ls https://raw.githubusercontent.com/eljsz/script-integration/master/check_x-ui.sh)</code></pre>
