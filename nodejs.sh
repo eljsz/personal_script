@@ -1,4 +1,3 @@
-```sh
 #!/bin/sh
 
 # Update the package list
@@ -24,4 +23,3 @@ sudo apt-get install nodejs -y
 
 # Install npm
 sudo apt-get install npm -y
-```
